@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en"><head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Traffic Light Recognition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <div class="brand">🚦 TrafficVision</div>
+    <span class="tag">MINI PROJECT</span>
+</header>
+<main>
+<section class="hero">
+    <p class="eyebrow">COMPUTER VISION DEMO</p>
+    <h1>Traffic Light 
+        <span>Recognition</span>
+    </h1>
+    <p>Upload an image to detect its dominant red, yellow, or green color.</p>
+</section>
+<section class="grid">
+<div class="panel">
+    <h2>Upload an image</h2>
+    <p class="muted">Choose a clear traffic-light photo.</p>
+    <label class="drop" for="imageInput">
+        <b class="upload">↑</b>
+        <strong>Choose image</strong>
+        <small>JPG, PNG, WEBP</small>
+    </label>
+    <input id="imageInput" type="file" accept="image/*">
+    <button id="analyzeBtn" disabled>Analyze image</button>
+    <p id="fileName" class="muted small">No image selected</p>
+    <p class="note">This is a color-based demo, not a trained AI model.</p>
+</div>
+<div class="panel">
+    <h2>Image preview</h2>
+    <div class="preview">
+        <div id="placeholder">🖼️
+            <p>Your image will appear here</p>
+        </div>
+        <img id="previewImage" alt="Uploaded traffic light" hidden>
+    </div>
+</div>
+</section>
+<section class="panel result">
+    <div>
+        <p class="eyebrow">RECOGNITION RESULT</p>
+        <h2 id="resultTitle">Waiting for image</h2>
+        <p id="resultText" class="muted">Upload an image, then click Analyze image.</p>
+    </div>
+    <div class="signal">
+        <span id="redLamp" class="lamp red"></span>
+        <span id="yellowLamp" class="lamp yellow"></span>
+        <span id="greenLamp" class="lamp green"></span>
+    </div>
+</section>
+<section class="how">
+    <h2>How it works</h2>
+    <div class="steps">
+        <article>
+            <b>01</b>
+            <h3>Upload</h3>
+            <p>Select a traffic-light image.</p>
+        </article>
+        <article>
+            <b>02</b>
+            <h3>Process</h3>
+            <p>The browser checks image pixels for signal colors.</p>
+        </article>
+        <article>
+            <b>03</b>
+            <h3>Display</h3>
+            <p>The dominant color and suggested action appear.</p>
+        </article>
+    </div>
+</section>
+<footer>
+    Student Mini Project · For demonstration only
+</footer>
+</main>
+<script src="script.js">
+</script>
+</body>
+</html>
